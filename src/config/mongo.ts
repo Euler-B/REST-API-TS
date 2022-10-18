@@ -1,9 +1,9 @@
 import "dotenv/config";
-import { connect } from moongose;
+import { connect } from "mongoose";
 
-async funtion dbconnect() = Promise<void> {
+async function dbConnect(): Promise<void> {
     const DB_URI = <string>process.env.DB_URI;
     await connect(DB_URI);
-} 
+}
 
-export default dbconnect;
+export default dbConnect;
