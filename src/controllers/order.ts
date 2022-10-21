@@ -1,12 +1,7 @@
 import { Request, Response } from "express";
 import dbConnect from "../config/mongo";
-import { JwtPayload } from "jsonwebtoken";
 import { handleHttp } from "../utils/error.handle";
-
-interface RequestExt extends Request {
-    user?: string | JwtPayload;
-};
-
+import { RequestExt } from "../interfaces/req-ext";
 
 const getItems = (req: RequestExt, res: Response) => {
   try {

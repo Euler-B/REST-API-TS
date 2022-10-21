@@ -141,3 +141,8 @@ web_modules/
 # and uncomment the following lines
 # .pnp.*
 
+## files and TS compiler will generate in this project
+storage/*
+!storage/.gitkeep
+dist/
+
